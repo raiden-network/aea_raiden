@@ -1,0 +1,54 @@
+---
+name: raiden
+author: brainbot
+version: 0.0.1
+description: Autonomous implementation of the Raiden protocol
+license: MIT
+protocol_specification_id: brainbot/raiden:0.0.1
+aea_version: '>=1.1.1, <2.0.0'
+
+speech_acts:
+  open_channel:
+    partner_address: pt:str
+    token_address: pt:str
+    total_deposit: pt:str
+
+  close_channel:
+    partner_address: pt:str
+    token_address: pt:str
+
+  deposit:
+    partner_address: pt:str
+    token_address: pt:str
+    amount: pt:str
+
+  transfer:
+    partner_address: pt:str
+    token_address: pt:str
+    amount: pt:str
+
+  success:
+    action: pt:str
+    detail: pt:optional[pt:str]
+
+  failure:
+    action: pt:str
+    detail: pt:optional[pt:str]
+
+  stop_node: {}
+...
+---
+initiation: [open_channel, close_channel, deposit, transfer]
+reply:
+  open_channel: [success, failure]
+  deposit: [success, failure]
+  transfer: [success, failure]
+  close_channel: [success, failure]
+  stop_node: [success, failure]
+  success: []
+  failure: []
+termination: [success, failure]
+roles: {node}
+end_states: [success, failure]
+keep_terminal_state_dialogues: true
+...

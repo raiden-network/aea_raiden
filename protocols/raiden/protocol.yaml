@@ -1,0 +1,18 @@
+name: raiden
+author: brainbot
+version: 0.0.1
+protocol_specification_id: brainbot/raiden:0.0.1
+type: protocol
+description: Autonomous implementation of the Raiden protocol
+license: MIT
+aea_version: '>=1.1.1, <2.0.0'
+fingerprint:
+  __init__.py: QmaH8xyyNTzVj7ozvF3TUGNyzsQXpQpxt3wZocMK1AKqjh
+  dialogues.py: QmQHi8o8TZiMr3jqPCPydwJbnYes7J2X7Df1xgVYGdEsaq
+  message.py: QmShYuiM64Xyi86vCRa69cd85hcUN7WyJKvKbQw1qHrErn
+  raiden.proto: QmdF5hBwpd2KZWrYeY57FrzbSRKn4M2hsqHmhVdyk4t3Zt
+  raiden_pb2.py: QmbTk8EsQYY5r9S6on4mHZuS6pNB9a3kHXgau34NBCm427
+  serialization.py: QmaptAo2aPqeB596eRqnTYvtTqyJdaA1Shm7nrFv59ywCQ
+fingerprint_ignore_patterns: []
+dependencies:
+  protobuf: {}

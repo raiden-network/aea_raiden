@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package aea.brainbot.raiden.v0_0_1;
+
+message RaidenMessage{
+
+  // Performatives and contents
+  message Open_Channel_Performative{
+    string partner_address = 1;
+    string token_address = 2;
+    string total_deposit = 3;
+  }
+
+  message Close_Channel_Performative{
+    string partner_address = 1;
+    string token_address = 2;
+  }
+
+  message Deposit_Performative{
+    string partner_address = 1;
+    string token_address = 2;
+    string amount = 3;
+  }
+
+  message Transfer_Performative{
+    string partner_address = 1;
+    string token_address = 2;
+    string amount = 3;
+  }
+
+  message Success_Performative{
+    string action = 1;
+    string detail = 2;
+    bool detail_is_set = 3;
+  }
+
+  message Failure_Performative{
+    string action = 1;
+    string detail = 2;
+    bool detail_is_set = 3;
+  }
+
+  message Stop_Node_Performative{
+  }
+
+
+  oneof performative{
+    Close_Channel_Performative close_channel = 5;
+    Deposit_Performative deposit = 6;
+    Failure_Performative failure = 7;
+    Open_Channel_Performative open_channel = 8;
+    Stop_Node_Performative stop_node = 9;
+    Success_Performative success = 10;
+    Transfer_Performative transfer = 11;
+  }
+}
