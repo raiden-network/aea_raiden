@@ -1,0 +1,5 @@
+.build
+.certs
+*_private_key.txt
+*.log
+vendor/*

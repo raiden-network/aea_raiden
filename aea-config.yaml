@@ -1,0 +1,50 @@
+agent_name: raiden
+author: brainbot
+version: 0.1.0
+license: MIT
+description: ''
+aea_version: '>=1.1.0, <2.0.0'
+fingerprint: {}
+fingerprint_ignore_patterns: []
+connections:
+- fetchai/ledger:0.19.0
+- fetchai/p2p_libp2p:0.25.0
+- fetchai/soef:0.26.0
+contracts: []
+protocols:
+- brainbot/raiden:0.0.1
+- fetchai/acn:1.0.0
+- fetchai/contract_api:1.0.0
+- fetchai/default:1.1.0
+- fetchai/ledger_api:1.0.0
+- fetchai/oef_search:1.0.0
+- fetchai/signing:1.1.0
+- fetchai/state_update:1.1.0
+skills:
+- brainbot/channel_manager:0.1.0
+default_connection: fetchai/p2p_libp2p:0.25.0
+default_ledger: fetchai
+required_ledgers:
+- fetchai
+default_routing:
+  fetchai/ledger_api:1.0.0: fetchai/ledger:0.19.0
+  fetchai/oef_search:1.0.0: fetchai/soef:0.26.0
+connection_private_key_paths:
+  fetchai: fetchai_connection_private_key.txt
+private_key_paths:
+  fetchai: fetchai_private_key.txt
+logging_config:
+  disable_existing_loggers: false
+  version: 1
+dependencies:
+  aea-ledger-fetchai: {}
+  raiden_api_client: {}
+---
+public_id: fetchai/p2p_libp2p:0.25.0
+type: connection
+config:
+  delegate_uri: null
+  local_uri: 0.0.0.0:9001
+  entry_peers: []
+  public_uri: null
+  log_file: libp2p_node.log
