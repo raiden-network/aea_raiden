@@ -5,7 +5,7 @@ COPY . .
 RUN mkdir -p /usr/lib/raiden/keystore
 
 RUN pip3 install -U pip wheel setuptools
-RUN apt-get update && apt-get install -y golang-go wget && pip3 install aea[all]
+RUN apt-get update && apt-get install -y golang-go wget && pip3 install -U aea[all]
 
 # Install GETH
 RUN wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.17-25c9b49f.tar.gz -O /tmp/geth.tar.gz && mkdir /tmp/geth && tar -xzf /tmp/geth.tar.gz -C /tmp/geth/ --strip-components=1 && mv /tmp/geth/geth /usr/bin && rm -rf /tmp/geth* && chmod +x /usr/bin/geth

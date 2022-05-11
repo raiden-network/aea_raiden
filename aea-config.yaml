@@ -39,12 +39,3 @@ logging_config:
 dependencies:
   aea-ledger-fetchai: {}
   raiden_api_client: {}
----
-public_id: fetchai/p2p_libp2p:0.25.0
-type: connection
-config:
-  delegate_uri: null
-  local_uri: 0.0.0.0:9001
-  entry_peers: []
-  public_uri: null
-  log_file: libp2p_node.log

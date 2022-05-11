@@ -4,6 +4,8 @@
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 
 # @@protoc_insertion_point(imports)
@@ -14,6 +16,110 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
     b'\n\x0craiden.proto\x12\x1a\x61\x65\x61.brainbot.raiden.v0_0_1"\x9b\t\n\rRaidenMessage\x12]\n\rclose_channel\x18\x05 \x01(\x0b\x32\x44.aea.brainbot.raiden.v0_0_1.RaidenMessage.Close_Channel_PerformativeH\x00\x12Q\n\x07\x64\x65posit\x18\x06 \x01(\x0b\x32>.aea.brainbot.raiden.v0_0_1.RaidenMessage.Deposit_PerformativeH\x00\x12Q\n\x07\x66\x61ilure\x18\x07 \x01(\x0b\x32>.aea.brainbot.raiden.v0_0_1.RaidenMessage.Failure_PerformativeH\x00\x12[\n\x0copen_channel\x18\x08 \x01(\x0b\x32\x43.aea.brainbot.raiden.v0_0_1.RaidenMessage.Open_Channel_PerformativeH\x00\x12U\n\tstop_node\x18\t \x01(\x0b\x32@.aea.brainbot.raiden.v0_0_1.RaidenMessage.Stop_Node_PerformativeH\x00\x12Q\n\x07success\x18\n \x01(\x0b\x32>.aea.brainbot.raiden.v0_0_1.RaidenMessage.Success_PerformativeH\x00\x12S\n\x08transfer\x18\x0b \x01(\x0b\x32?.aea.brainbot.raiden.v0_0_1.RaidenMessage.Transfer_PerformativeH\x00\x1a\x62\n\x19Open_Channel_Performative\x12\x17\n\x0fpartner_address\x18\x01 \x01(\t\x12\x15\n\rtoken_address\x18\x02 \x01(\t\x12\x15\n\rtotal_deposit\x18\x03 \x01(\t\x1aL\n\x1a\x43lose_Channel_Performative\x12\x17\n\x0fpartner_address\x18\x01 \x01(\t\x12\x15\n\rtoken_address\x18\x02 \x01(\t\x1aV\n\x14\x44\x65posit_Performative\x12\x17\n\x0fpartner_address\x18\x01 \x01(\t\x12\x15\n\rtoken_address\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\t\x1aW\n\x15Transfer_Performative\x12\x17\n\x0fpartner_address\x18\x01 \x01(\t\x12\x15\n\rtoken_address\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\t\x1aM\n\x14Success_Performative\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\x12\x15\n\rdetail_is_set\x18\x03 \x01(\x08\x1aM\n\x14\x46\x61ilure_Performative\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\x12\x15\n\rdetail_is_set\x18\x03 \x01(\x08\x1a\x18\n\x16Stop_Node_PerformativeB\x0e\n\x0cperformativeb\x06proto3'
 )
+
+
+_RAIDENMESSAGE = DESCRIPTOR.message_types_by_name["RaidenMessage"]
+_RAIDENMESSAGE_OPEN_CHANNEL_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Open_Channel_Performative"
+]
+_RAIDENMESSAGE_CLOSE_CHANNEL_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Close_Channel_Performative"
+]
+_RAIDENMESSAGE_DEPOSIT_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Deposit_Performative"
+]
+_RAIDENMESSAGE_TRANSFER_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Transfer_Performative"
+]
+_RAIDENMESSAGE_SUCCESS_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Success_Performative"
+]
+_RAIDENMESSAGE_FAILURE_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Failure_Performative"
+]
+_RAIDENMESSAGE_STOP_NODE_PERFORMATIVE = _RAIDENMESSAGE.nested_types_by_name[
+    "Stop_Node_Performative"
+]
+RaidenMessage = _reflection.GeneratedProtocolMessageType(
+    "RaidenMessage",
+    (_message.Message,),
+    {
+        "Open_Channel_Performative": _reflection.GeneratedProtocolMessageType(
+            "Open_Channel_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_OPEN_CHANNEL_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Open_Channel_Performative)
+            },
+        ),
+        "Close_Channel_Performative": _reflection.GeneratedProtocolMessageType(
+            "Close_Channel_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_CLOSE_CHANNEL_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Close_Channel_Performative)
+            },
+        ),
+        "Deposit_Performative": _reflection.GeneratedProtocolMessageType(
+            "Deposit_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_DEPOSIT_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Deposit_Performative)
+            },
+        ),
+        "Transfer_Performative": _reflection.GeneratedProtocolMessageType(
+            "Transfer_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_TRANSFER_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Transfer_Performative)
+            },
+        ),
+        "Success_Performative": _reflection.GeneratedProtocolMessageType(
+            "Success_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_SUCCESS_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Success_Performative)
+            },
+        ),
+        "Failure_Performative": _reflection.GeneratedProtocolMessageType(
+            "Failure_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_FAILURE_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Failure_Performative)
+            },
+        ),
+        "Stop_Node_Performative": _reflection.GeneratedProtocolMessageType(
+            "Stop_Node_Performative",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _RAIDENMESSAGE_STOP_NODE_PERFORMATIVE,
+                "__module__": "raiden_pb2"
+                # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage.Stop_Node_Performative)
+            },
+        ),
+        "DESCRIPTOR": _RAIDENMESSAGE,
+        "__module__": "raiden_pb2"
+        # @@protoc_insertion_point(class_scope:aea.brainbot.raiden.v0_0_1.RaidenMessage)
+    },
+)
+_sym_db.RegisterMessage(RaidenMessage)
+_sym_db.RegisterMessage(RaidenMessage.Open_Channel_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Close_Channel_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Deposit_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Transfer_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Success_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Failure_Performative)
+_sym_db.RegisterMessage(RaidenMessage.Stop_Node_Performative)
 
 if _descriptor._USE_C_DESCRIPTORS == False:
 

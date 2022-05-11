@@ -7,12 +7,12 @@ description: Autonomous implementation of the Raiden protocol
 license: MIT
 aea_version: '>=1.1.1, <2.0.0'
 fingerprint:
-  __init__.py: QmaH8xyyNTzVj7ozvF3TUGNyzsQXpQpxt3wZocMK1AKqjh
-  dialogues.py: QmQHi8o8TZiMr3jqPCPydwJbnYes7J2X7Df1xgVYGdEsaq
-  message.py: QmShYuiM64Xyi86vCRa69cd85hcUN7WyJKvKbQw1qHrErn
+  __init__.py: QmYbVPr3G35EkTQDyc29FPNF5ZsqmUBXpSwdGZS5GW76Vj
+  dialogues.py: QmUcsvTyP3Dgqp83ZwdeC9vgztRvWQh24dw7rA9EzscATn
+  message.py: QmfSH3fpiGyv4pToN6hBL41RqVNMPwRECkGszKcBCpEtgW
   raiden.proto: QmdF5hBwpd2KZWrYeY57FrzbSRKn4M2hsqHmhVdyk4t3Zt
-  raiden_pb2.py: QmbTk8EsQYY5r9S6on4mHZuS6pNB9a3kHXgau34NBCm427
-  serialization.py: QmaptAo2aPqeB596eRqnTYvtTqyJdaA1Shm7nrFv59ywCQ
+  raiden_pb2.py: QmQDcwsYSe4pSdUZ2BpRaXW3X3i8Z9C7TJ9DRFeLUafWsH
+  serialization.py: QmQ7MuNM88beEpj1Viy6boF5jC2ii6yrDGELnf2qJdNBKg
 fingerprint_ignore_patterns: []
 dependencies:
   protobuf: {}
